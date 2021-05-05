@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Index</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" />
+    <link rel="icon" href="../images/logo-mansamegah.png">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../fontawesome-free/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Header-->
+    <header>
+        <div class="container-fluid headerback bg-primary">
+            <div class="row">
+                <div class="col text-light bg-main">
+                    <div class="logo-head"><img class="img" src="../images/logo-mansamegah.png" alt="Mansamegah"></div>
+                    <div class="title">
+                        <a href="#">Admin Portal Mansamegah</a>
+                    </div>
+                    <div class="dropdown ml-auto">
+                        <button class="btn bg-main2" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="true">
+                            <i class="fa-2x fas fa-user-circle text-white"></i>
+                            <span class="text-user text-white pl-2">Username</span>
+                        </button>
+                        <div class="dropdown-menu menu2 mr-5" aria-labelledby="dropdownMenu2">
+                            <a class="dropdown-item" type="button" href="user_datasiswa.html"><i
+                                    class="far fa-user text-primary pr-2"></i><span>Akun Saya</span></a>
+                            <a class="dropdown-item" type="button" href="../login.html"><i
+                                    class="fas fa-sign-out-alt text-primary pr-2"></i><span>Keluar</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="row no-gutters">
+            <!-- Navbar Menu-->
+            <div class="navigation col-md-2 col-sm-12 secondary-color">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="index.html" aria-current="page" href="#">
+                            <span class="icon"><i class="fas fa-home mr-2"></i></span>
+                            <span class="title">Beranda</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="admin_tahunajaran.html">
+                            <span class="icon"><i class="far fa-calendar-plus mr-2"></i></span>
+                            <span class="title">Tahun Ajaran</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="admin_guru.html">
+                            <span class="icon"><i class="fas fa-chalkboard-teacher mr-2"></i></span>
+                            <span class="title">Guru</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">
+                            <span class="icon"><i class="fas fa-users mr-2"></i></span>
+                            <span class="title">Siswa</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page" href="admin_kelas.html">
+                            <span class="icon"><i class="fas fa-door-open mr-2"></i></span>
+                            <span class="title">Kelas</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="admin_matpel.html">
+                            <span class="icon"><i class="fas fa-book mr-2"></i></span>
+                            <span class="title">Mata Pelajaran</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">
+                            <span class="icon"><i class="far fa-calendar-alt mr-2"></i></span>
+                            <span class="title">Jadwal</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">
+                            <span class="icon"><i class="fas fa-user-cog mr-2"></i></span>
+                            <span class="title">Akun</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page" href="#">
+                            <span class="icon"><i class="fas fa-bullhorn mr-2"></i></span>
+                            <span class="title">Pengumuman</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-10 utama p-4 pt-2">
+                <h4 class="text-second"><i class="fas fa-users mr-2"></i>Data Siswa</h4>
+                <div class="col-md bg-white mt-4">
+                    <div class="pl-2 p-4">
+                        <form class="" action="#" method="get">
+                            <input type="search" class="browser-default sel-opt" placeholder="Cari Siswa">
+                            <button class="btn btn-primary rounded1 pl-4 pr-4" type="submit"
+                                name="searchStudent">Cari</button>
+                            <button class="btn btn-outline-primary rounded1" type="submit" name="addStudent"
+                                data-toggle="modal" data-target="#addStudentModal">Tambah Data</button>
+                        </form>
+                        <div class="table-responsive mt-3">
+                            <table class="table table-sm table-bordered mt-3 table-hover">
+                                <thead class="table-primary text-center">
+                                    <tr class="align-item-middle">
+                                        <th class="align-middle">No.</th>
+                                        <th class="align-middle">NIS</th>
+                                        <th class="align-middle">NISN</th>
+                                        <th class="align-middle">Nama Lengkap</th>
+                                        <th class="align-middle">Tempat Lahir</th>
+                                        <th class="align-middle">Tanggal Lahir</th>
+                                        <th class="align-middle">Jenis Kelamin</th>
+                                        <th class="align-middle">Alamat</th>
+                                        <th class="align-middle">No. Telp</th>
+                                        <th class="align-middle">Kelas</th>
+                                        <th class="align-middle">Jurusan</th>
+                                        <th class="align-middle">Angkatan</th>
+                                        <th class="align-middle">Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="align-middle">1</td>
+                                        <td class="align-middle">NIS</td>
+                                        <td class="align-middle">NISN</td>
+                                        <td class="align-middle">Nama Lengkap</td>
+                                        <td class="align-middle">Tempat Lahir</td>
+                                        <td class="align-middle">Tanggal Lahir</td>
+                                        <td class="align-middle">Jenis Kelamin</td>
+                                        <td class="align-middle">Alamat</td>
+                                        <td class="align-middle">No. Telp</td>
+                                        <td class="align-middle">Kelas</td>
+                                        <td class="align-middle">Jurusan</td>
+                                        <td class="align-middle">Angkatan</td>
+                                        <td>
+                                            <a href="#" class="btn btn-success btn-sm" name="editStudent"
+                                                data-toggle="modal" data-target="#editStudentModal">
+                                                <i class="far fa-edit"></i>
+                                            </a>
+                                            <a href="#" class="btn btn-danger btn-sm" name="deleteStudent"
+                                                data-toggle="modal" data-target="#deleteStudentModal">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-middle">1</td>
+                                        <td class="align-middle">NIS</td>
+                                        <td class="align-middle">NISN</td>
+                                        <td class="align-middle">Nama Lengkap</td>
+                                        <td class="align-middle">Tempat Lahir</td>
+                                        <td class="align-middle">Tanggal Lahir</td>
+                                        <td class="align-middle">Jenis Kelamin</td>
+                                        <td class="align-middle">Alamat</td>
+                                        <td class="align-middle">No. Telp</td>
+                                        <td class="align-middle">Kelas</td>
+                                        <td class="align-middle">Jurusan</td>
+                                        <td class="align-middle">Angkatan</td>
+                                        <td>
+                                            <a href="#" class="btn btn-success btn-sm" name="editStudent"
+                                                data-toggle="modal" data-target="#editStudentModal">
+                                                <i class="far fa-edit"></i>
+                                            </a>
+                                            <a href="#" class="btn btn-danger btn-sm" name="deleteStudent"
+                                                data-toggle="modal" data-target="#deleteStudentModal">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Tambah Data Tahun Ajaran -->
+            <div class="modal fade" id="addStudentModal" tabindex="-1" aria-labelledby="addStudentLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addStudentLabel">Tambah Biodata Siswa</h5>
+                            <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close"><span
+                                    class="" aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="" method="post">
+                                <h6 class="pb-3">Data Siswa</h6>
+                                <input type="text" class="form-control mb-2" placeholder="NIS">
+                                <input type="text" class="form-control mb-2" placeholder="NISN">
+                                <input type="text" class="form-control mb-2" placeholder="Nama Lengkap">
+                                <input type="text" class="form-control mb-2" placeholder="Tempat Lahir">
+                                <input type="text" class="form-control mb-2" placeholder="Tanggal Lahir">
+                                <select class="form-control mb-2">
+                                    <option value="" disabled selected>Jenis Kelamin</option>
+                                    <option value="pria">Pria</option>
+                                    <option value="wanita">Wanita</option>
+                                </select>
+                                <input type="text" class="form-control mb-2" placeholder="Alamat">
+                                <input type="text" class="form-control mb-2" placeholder="No. Telp">
+                                <select class="form-control mb-2">
+                                    <option value="" disabled selected>Kelas</option>
+                                    <option value="pria">Pria</option>
+                                    <option value="wanita">Wanita</option>
+                                </select>
+                                <select class="form-control mb-2">
+                                    <option value="" disabled selected>Angkatan</option>
+                                    <option value="pria">Pria</option>
+                                    <option value="wanita">Wanita</option>
+                                </select>
+                                <h6 class="pt-3 pb-3">Data Orang Tua</h6>
+                                <input type="text" class="form-control mb-2" placeholder="Nama Ayah">
+                                <input type="text" class="form-control mb-2" placeholder="Pekerjaan Ayah">
+                                <input type="text" class="form-control mb-2" placeholder="Nomor Telepon Ayah">
+                                <input type="text" class="form-control mb-2" placeholder="Alamat Ayah">
+                                <input type="text" class="form-control mb-2" placeholder="Nama Ibu">
+                                <input type="text" class="form-control mb-2" placeholder="Perkerjaan Ibu">
+                                <input type="text" class="form-control mb-2" placeholder="Nomor Telepon Ibu">
+                                <input type="text" class="form-control mb-2" placeholder="Alamat Ibu">
+                                <h6 class="pt-3 pb-3">Data Wali</h6>
+                                <input type="text" class="form-control mb-2" placeholder="Nama Wali">
+                                <input type="text" class="form-control mb-2" placeholder="Perkerjaan Wali">
+                                <input type="text" class="form-control mb-2" placeholder="Nomor Telepon Wali">
+                                <input type="text" class="form-control mb-2" placeholder="Alamat Wali">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>
+                            <button type="button" class="btn btn-success">Simpan</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Edit Data Tahun Ajaran -->
+            <div class="modal fade" id="editStudentModal" tabindex="-1" aria-labelledby="editStudentLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="editStudentLabel">Edit Data Siswa</h5>
+                            <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close"><span
+                                    class="" aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <h6 class="pb-3">Data Siswa</h6>
+                            <input type="text" class="form-control mb-2" placeholder="NIS">
+                            <input type="text" class="form-control mb-2" placeholder="NISN">
+                            <input type="text" class="form-control mb-2" placeholder="Nama Lengkap">
+                            <input type="text" class="form-control mb-2" placeholder="Tempat Lahir">
+                            <input type="date" class="form-control mb-2" placeholder="Tanggal Lahir">
+                            <select class="form-control mb-2">
+                                <option value="" disabled selected>Jenis Kelamin</option>
+                                <option value="pria">Pria</option>
+                                <option value="wanita">Wanita</option>
+                            </select>
+                            <input type="text" class="form-control mb-2" placeholder="Alamat">
+                            <input type="text" class="form-control mb-2" placeholder="No. Telp">
+                            <select class="form-control mb-2">
+                                <option value="" disabled selected>Kelas</option>
+                                <option value="pria">Pria</option>
+                                <option value="wanita">Wanita</option>
+                            </select>
+                            <select class="form-control mb-2">
+                                <option value="" disabled selected>Angkatan</option>
+                                <option value="pria">Pria</option>
+                                <option value="wanita">Wanita</option>
+                            </select>
+                            <h6 class="pt-3 pb-3">Data Orang Tua</h6>
+                            <input type="text" class="form-control mb-2" placeholder="Nama Ayah">
+                            <input type="text" class="form-control mb-2" placeholder="Pekerjaan Ayah">
+                            <input type="text" class="form-control mb-2" placeholder="Nomor Telepon Ayah">
+                            <input type="text" class="form-control mb-2" placeholder="Alamat Ayah">
+                            <input type="text" class="form-control mb-2" placeholder="Nama Ibu">
+                            <input type="text" class="form-control mb-2" placeholder="Perkerjaan Ibu">
+                            <input type="text" class="form-control mb-2" placeholder="Nomor Telepon Ibu">
+                            <input type="text" class="form-control mb-2" placeholder="Alamat Ibu">
+                            <h6 class="pt-3 pb-3">Data Wali</h6>
+                            <input type="text" class="form-control mb-2" placeholder="Nama Wali">
+                            <input type="text" class="form-control mb-2" placeholder="Perkerjaan Wali">
+                            <input type="text" class="form-control mb-2" placeholder="Nomor Telepon Wali">
+                            <input type="text" class="form-control mb-2" placeholder="Alamat Wali">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>
+                            <button type="button" class="btn btn-success">Simpan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Hapus Data-->
+            <div class="modal fade" id="deleteStudentModal" tabindex="-1" role="dialog"
+                aria-labelledby="deleteStudentLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="deleteStudentLabel">Hapus Data</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                                    aria-hidden="true">&times;</span> </button>
+                        </div>
+                        <div class="modal-body">Yakin untuk menghapus?</div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Tidak</button>
+                            <a href="#delete" id="delete" class="btn btn-success">Yakin</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+        </script>
+    <script>
+        $(document).on("click", "#delete", function () {
+            $('#deleteStudentModal').modal('hide');
+        });
+    </script>
+</body>
+
+</html>
